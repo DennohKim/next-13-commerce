@@ -1,6 +1,9 @@
+import { UserButton } from '@clerk/nextjs'
 import React from 'react'
-export default function Home() {
+export default function SetupPage() {
   return (
-    <p>App router</p>
+    <div>
+		<UserButton afterSignOutUrl='/'/>
+	</div>
   )
 }
