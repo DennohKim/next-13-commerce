@@ -22,14 +22,15 @@ export const Modal: React.FC<ModalProps> = ({
 		if(!open) onClose()
 	}
 return (
-	<Dialog open={isOpen} onOpenChange={onChange}>
-		<DialogContent>
-			<DialogHeader>
-				<DialogTitle>{title}</DialogTitle>
-			</DialogHeader>
-			<DialogDescription>{description}</DialogDescription>
-		</DialogContent>
-	</Dialog>
-)
+  <Dialog open={isOpen} onOpenChange={onChange}>
+    <DialogContent>
+      <DialogHeader>
+        <DialogTitle>{title}</DialogTitle>
+        <DialogDescription>{description}</DialogDescription>
+      </DialogHeader>
+	  <div>{children}</div>
+    </DialogContent>
+  </Dialog>
+);
 
 }
