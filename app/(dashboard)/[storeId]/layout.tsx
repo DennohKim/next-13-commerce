@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar';
 import prismadb from '@/lib/prismadb';
 import { auth } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
@@ -26,9 +27,7 @@ const DashboardLayout: FC<layoutProps> = async ({ children, params }) => {
   }
   return (
     <>
-      <div>
-		This will be the dashboard
-		</div>;
+    <Navbar/>
 		{children}
     </>
   );
